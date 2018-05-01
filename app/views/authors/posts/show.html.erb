@@ -6,10 +6,17 @@
   <%= link_to 'Remove', authors_post_path(@post), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
 </div>
 
+<br/>
+
+<h1><b><%= @post.impressionist_count(:filter=>:ip_address) %></b> <%= "view".pluralize(@post.impressionist_count(:filter=>:ip_address)) %></h1>
+
+<br/>
+<br/>
+<br/>
 <div class="row">
   <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
     <h1><%= @post.title %></h1>
     <p><%= @post.display_day_published %></p>
-    <%= @post.body.html_safe %>
+    <%= raw @post.body.html_safe %>
   </div>
 </div>

@@ -1,5 +1,6 @@
 module Authors
   class PostsController < AuthorController
+    impressionist :actions=>[:show]
     before_action :set_post, only: [:show, :edit, :update, :destroy, :publish, :unpublish]
 
     # GET /posts
@@ -11,6 +12,7 @@ module Authors
     # GET /posts/1
     # GET /posts/1.json
     def show
+      impressionist(@post)
     end
 
     # GET /posts/new
