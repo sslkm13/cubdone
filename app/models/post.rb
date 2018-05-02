@@ -18,6 +18,8 @@
 class Post < ApplicationRecord
   searchkick
   acts_as_taggable # Alias for acts_as_taggable_on :tags
+  validates :title, presence: true
+  validates :body, presence: true
 
   extend FriendlyId
   friendly_id :title, use: :slugged
