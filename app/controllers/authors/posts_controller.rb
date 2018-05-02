@@ -9,14 +9,6 @@ module Authors
       @posts = current_author.posts.most_recent
     end
 
-    def search
-      if params[:search].present?
-        @posts = Post.search(params[:search])
-      else
-        @posts = Post.all
-      end
-    end
-
     # GET /posts/1
     # GET /posts/1.json
     def show
