@@ -13,7 +13,7 @@ module Authors
       if params[:search].present?
         @posts = Post.search(params[:search])
       else
-        @posts = current_author.posts.most_recent
+        @posts = Post.all
       end
     end
 
