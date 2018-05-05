@@ -37,6 +37,10 @@ class Post < ApplicationRecord
     recent_paginated(page).with_tag(tag)
   end
 
+  def self.search(search)
+    where("title LIKE ? OR body LIKE ?", "%#{search}%", "%#{search}%")
+  end
+
   def should_generate_new_friendly_id?
     title_changed?
   end
@@ -56,5 +60,4 @@ class Post < ApplicationRecord
   def unpublish
     update(published: false, published_at: nil)
   end
-
 end
