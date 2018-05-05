@@ -33,6 +33,7 @@ gem 'ckeditor'
 gem 'paperclip'
 gem 'impressionist'
 gem 'social-share-button'
+gem 'searchlogic', '~> 2.5', '>= 2.5.19'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

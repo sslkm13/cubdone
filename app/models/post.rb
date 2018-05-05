@@ -56,5 +56,4 @@ class Post < ApplicationRecord
   def unpublish
     update(published: false, published_at: nil)
   end
-
 end

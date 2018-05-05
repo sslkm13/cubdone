@@ -3,6 +3,8 @@
     <div class='card'>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
+        </li>
+        <li class="list-group-item">
           <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
         </li>
         <li class="list-group-item">
@@ -32,6 +34,16 @@
     <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
       &#9776;
     </button>
+    <!--
+    <ul class="nav navbar-nav pull-sm-left">
+      <%= form_tag authors_posts_path, :method => :get do %>
+            <p>
+              <%= text_field_tag :search, params[:search] %>
+              <%= submit_tag "Search", name: nil %>
+            </p>
+          <% end %>
+    </ul>
+  -->
     <ul class="nav navbar-nav pull-sm-right hidden-xs-down">
       <li class="nav-item">
         <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
